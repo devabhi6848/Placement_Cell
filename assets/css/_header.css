@@ -1,67 +1,118 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .header {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo img {
-    /* background-image: url('../images/coding-ninjas-logos-idFrWdCkB5.png'); */
-    width: 200px;
-  height: 75px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+    width: 180px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-.middle {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+.logo img:hover {
+    transform: scale(1.05);
 }
 
-.right {
+.nav {
     display: flex;
-    align-items: center;
+    gap: 30px;
 }
 
-.menu-item {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.menu-item:hover {
-    color: #4CAF50;
-}
-
-.sign-out {
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-}
-
-.sign-out button {
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 5px;
+.nav-link {
     color: #fff;
-    padding: 8px 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.sign-out button:hover {
-    background-color: #45a049;
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome-text {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.logout-form {
+    margin: 0;
+}
+
+.logout-btn {
+    background: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .user-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
 }

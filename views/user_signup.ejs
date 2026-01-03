@@ -1,29 +1,87 @@
 <link rel="stylesheet" href="/css/user_signup.css">
-<div class="signup_container">
-    <div class="sign-in-heading">
-        <h2>Pcell Sign Up</h2>
-     
+<div class="signup-container">
+    <div class="signup-card">
+        <div class="signup-header">
+            <div class="logo-section">
+                <img src="/images/coding-ninjas-logos-idFrWdCkB5.png" alt="Placement Cell Logo" class="logo">
+                <h1>Placement Cell</h1>
+            </div>
+            <h2>Join Us Today</h2>
+            <p>Create your account to start your recruitment journey</p>
+        </div>
+
+        <form class="signup-form" action="/users/create" method="post">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-envelope input-icon"></i>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+                </div>
+            </div>
+
+            <button type="submit" class="signup-btn">
+                <i class="fas fa-user-plus"></i>
+                Create Account
+            </button>
+        </form>
+
+        <div class="divider">
+            <span>or</span>
+        </div>
+
+        <div class="signin-link">
+            <p>Already have an account? <a href="/users/sign-in">Sign In</a></p>
+        </div>
+
+        <div class="additional-info">
+            <p>By creating an account, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+        </div>
     </div>
 
-    <form class="signup_form" action="/users/create" method="post">
-        <div class="signup_form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <div class="info-panel">
+        <div class="info-content">
+            <h3>Start Your Career Journey</h3>
+            <p>Join thousands of students who have found their dream jobs through our placement platform.</p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Students Placed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Partner Companies</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Success Rate</span>
+                </div>
+            </div>
         </div>
-        <div class="signup_form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        </div>
-        <div class="signup_form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-        </div>
-        <div class="signup_form-group">
-            <label for="confirm_password">Confirm Password:</label>
-            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
-        </div>
-        <input type="submit" value="Sign Up" class="signup_submit-button">
-    </form>
+    </div>
 </div>
 
 

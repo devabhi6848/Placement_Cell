@@ -1,0 +1,2 @@
+- [x] Update user_signup.ejs to match the structure of user_signin.ejs, adapting for signup context
+- [x] Update user_signup.css to match user_signin.css, changing class names from signin-* to signup-*
