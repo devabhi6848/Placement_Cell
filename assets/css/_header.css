@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    /* background-image: url('../images/coding-ninjas-logos-idFrWdCkB5.png'); */
+    width: 200px;
+  height: 75px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.middle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu-item:hover {
+    color: #4CAF50;
+}
+
+.sign-out {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.sign-out button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sign-out button:hover {
+    background-color: #45a049;
+}

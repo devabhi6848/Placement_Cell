@@ -1,0 +1,36 @@
+
+<header class="header">
+    <div class="logo" >
+  <a href="/"><img  src="/images/coding-ninjas-logos-idFrWdCkB5.png" alt="Pcell"></a> 
+    </div>
+ 
+    <% if(locals.user){ %>
+    <div class="right">
+        <a href="/interviews/add" class="menu-item">Interview List</a>
+        <a href="/downloads/download-csv" class="menu-item">Download Report</a>
+        
+            <div class="sign-out">
+                <form action="/users/destroySession">
+
+                    <button type="submit" >sign-out</button>
+                </form>
+                </div>
+                
+            </div>
+            <% } else{%>
+        
+                        <div class="sign-out">
+                            <form action="/users/sign-in">
+            
+                                <button type="submit" >sign-in</button>
+                            </form>
+                            &nbsp; &nbsp;
+                            <form action="/users/sign-up">
+            
+                                <button type="submit" >sign-up</button>
+                            </form>
+                            </div>
+                            
+                        </div>
+                <% } %>
+</header>

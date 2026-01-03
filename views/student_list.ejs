@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="/css/student_list.css">
+<style>
+    #Student-List{
+        height: 100vh;
+         text-align: right;
+    }
+    #Student-List form{
+        /* margin-top: 2rem; */
+        margin-right: 20px;
+    }
+    #Student-List form input{
+        width: 200px;
+        /* height: 1.2rem; */
+    }
+</style>
+<div id="Student-List" >
+    
+    <form action="/students/add_form" method="get">
+        <input type="submit" class="gradient-button" value="Add Student">
+    </form>
+    <table>
+        <thead>
+            <tr>
+           
+                <th>Batch</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>DSA</th>
+                <th>WEB</th>
+                <th>REACT</th>
+                <th>Interview</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(student of students){ %>
+           <tr>
+            <td><%=student.batch %></td>
+            <td><%=student.name %></td>
+            <td><%=student.email %></td>
+            <td><%=student.contact %></td>
+            <td><%=student.dsa %></td>
+            <td><%=student.webd %></td>
+            <td><%=student.react %></td>
+           	<% if(student.interviews.length) {%>
+                <td>
+                    <% for(let company of student.interviews){%>
+                    <a href=" " id="compnay_name"><%=company.company%></a>
+                    <%}%>
+                </td>
+                <%}else{%>
+                <td>NONE</td>
+                <%}%></td>
+            <td >
+                <form action="/students/delete/<%=student._id%>" method="post">
+                <button class="delete-button" style=" margin-top: -10px; margin-left: 40px; cursor: pointer; ">Delete</button>
+                </form>
+            </td>
+        </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+   
+</div>
+
+    <script>
+        function signOut() {
+            // Perform sign out actions
+            alert("Signing out...");
+        }
+    </script>
+
