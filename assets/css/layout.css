@@ -1,5 +1,26 @@
-body {
+/* ===============================
+   GLOBAL RESET & LAYOUT
+================================ */
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
-  
+}
+
+body {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    background: #f5f7fb;
+}
+
+/* ===============================
+   STICKY FOOTER FIX
+================================ */
+.app-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-content {
+    flex: 1;
+    padding-bottom: 40px; /* spacing before footer */
 }
