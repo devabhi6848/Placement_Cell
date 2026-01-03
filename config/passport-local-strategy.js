@@ -15,10 +15,14 @@ passport.use(new LocalStrategy({
 
         User.findOne({ email: email })
             .then((user) => {
+                console.log('User found:', user);
+                console.log('Password provided:', password);
                 if (!user || user.password != password) {
+                    console.log('Authentication failed');
                     // req.flash('error', 'Invalid Username/Password');
                     return done(null, false);
                 }
+                console.log('Authentication successful');
                 return done(null, user);
             })
             .catch((err) => {

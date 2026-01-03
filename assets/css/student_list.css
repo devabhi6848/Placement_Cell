@@ -1,66 +1,174 @@
+/* ===============================
+   GLOBAL
+================================ */
+body {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    background: #f5f7fb;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
 
+/* ===============================
+   CONTAINER
+================================ */
+.student-list-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-table {
-    /* height: 100vh; */
+/* ===============================
+   HEADER
+================================ */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 24px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+}
+
+.header-section h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.header-section p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Add Student Button */
+.add-student-btn {
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.add-student-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+}
+
+/* ===============================
+   TABLE CARD
+================================ */
+.table-container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+}
+
+/* ===============================
+   TABLE
+================================ */
+.student-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
 }
 
-th, td {
-    padding: 10px;
+.student-table thead {
+    background: #f1f4f9;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.student-table th {
+    padding: 14px 12px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #555;
+    border-bottom: 1px solid #e3e6ed;
 }
 
-th {
-    background-color: #4CAF50;
-    color: #fff;
-    font-weight: bold;
+.student-table td {
+    padding: 14px 12px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+/* Row hover */
+.student-table tbody tr:hover {
+    background-color: #f9fbff;
 }
 
-.action-button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
+/* Zebra effect */
+.student-table tbody tr:nth-child(even) {
+    background-color: #fcfcfc;
 }
 
-.action-button:hover {
-    background-color: #45a049;
-}
-
-.gradient-button {
-    background: linear-gradient(to right, #333333, #444444, #555555, #666666);    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
- 
-}
-
-.delete-button {
+/* ===============================
+   INTERVIEW TAGS
+================================ */
+.interview-tag {
     display: inline-block;
-    padding: 8px 16px;
-    background-color: #f44336;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
+    background: #e8f0fe;
+    color: #1a73e8;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 3px;
+}
+
+.no-interview {
+    font-size: 12px;
+    color: #999;
+}
+
+/* ===============================
+   DELETE BUTTON
+================================ */
+.delete-form {
+    margin: 0;
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #f44336, #c62828);
     border: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  .delete-button:hover {
-    background-color: #d32f2f;
-  }
-  
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(244, 67, 54, 0.4);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .header-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .student-table th,
+    .student-table td {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
